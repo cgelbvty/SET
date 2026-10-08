@@ -19,16 +19,15 @@
                     <summary><b>График</b></summary>
                     <h3>Значение по оси OX</h3>
                     <p>
-                    <input type="radio" name="ox"> Исполнитель<br>
-                    <input type="radio" name="ox"> Страна<br>
-                    <input type="radio" name="ox"> Жанр<br>
-                    <input type="radio" name="ox"> Год
+                    <input type="radio" name="ox" id="ox_counry"><label for="ox_counry">Страна</label><br>
+                    <input type="radio" name="ox" id="ox_genre"><label for="ox_genre">Жанр</label><br>
+                    <input type="radio" name="ox" id="ox_year"><label for="ox_year">Год</label> 
                     </p>
                     <h3>Значение по оси OY</h3>
                     <p>
-                    <input type="checkbox"> Максимальное число прослушиваний<br>
-                    <input type="checkbox"> Минимальное число прослушиваний<br>
-                    <input type="checkbox"> Количество альбомов
+                    <input type="checkbox" name="oy" id="oy_max_listenings"><label for="oy_max_listenings">Максимальное число прослушиваний</label> <br>
+                    <input type="checkbox" name="oy" id="oy_min_listenings"><label for="oy_min_listenings">Минимальное число прослушиваний</label> <br>
+                    <input type="checkbox" name="oy" id="oy_avg_listenings"><label for="oy_avg_listenings">Среднее число прослушиваний</label> 
                     </p>
                     <p><input type="button" value="Построить"></p>
                     <p>Здесь будет график</p>
@@ -36,62 +35,63 @@
 
                 <details open>
                     <summary><b>Фильтр</b></summary>
-                    <p>Альбом: <input type="text"></p>
-                    <p>Исполнитель: <input type="text"></p>
-                    <p>Страна: <input type="text"></p>
-                    <p>Жанр: <input type="text"></p>
-                    <p>Год: от <input type="text"> до <input type="text"></p>
-                    <p>Прослушивания: от <input type="text"> до <input type="text"></p>
+                    <p><label for="album">Альбом: </label><input type="text" id="album"></p>
+                    <p><label for="executor">Исполнитель: </label><input type="text" id="executor"></p>
+                    <p><label for="country">Страна: </label><input type="text" id="country"></p>
+                    <p><label for="genre">Жанр: </label><input type="text" id="genre"></p>
+                    <p><label for="year1">Год: от </label><input type="number" id="year2"><label for="year2"> до </label><input type="number" id="year"></p>
+                    <p><label for="auditions1">Прослушивания: от </label><input type="number" id="auditions1"><label for="auditions2"> до </label><input type="number" id="auditions2"></p>
                     <p><input type="button" value="Найти"></p>
                 </details>
 
                 <details open>
                     <summary><b>Сортировка</b></summary>
                     <p>
-                    Первый уровень:
-                    <select>
-                        <option>Нет</option>
-                        <option>Альбом</option>
-                        <option>Исполнитель</option>
-                        <option>Страна</option>
-                        <option>Жанр</option>
-                        <option>Год</option>
-                        <option>Прослушивания</option>
+                    <label for="sort1">Первый уровень:</label>
+                    <select id="sort1">
+                        <option value="0">Нет</option>
+                        <option value="1">Альбом</option>
+                        <option value="2">Исполнитель</option>
+                        <option value="3">Страна</option>
+                        <option value="4">Жанр</option>
+                        <option value="5">Год</option>
+                        <option value="6">Прослушивания</option>
                     </select>
-                    по убыванию? <input type="checkbox">
+                    <label for="decrease1">по убыванию?</label><input type="checkbox" id="decrease1">
                     </p>
                     <p>
-                    Второй уровень:
-                    <select>
-                        <option>Нет</option>
-                        <option>Альбом</option>
-                        <option>Исполнитель</option>
-                        <option>Страна</option>
-                        <option>Жанр</option>
-                        <option>Год</option>
-                        <option>Прослушивания</option>
+                    <label for="sort2">Второй уровень:</label>
+                    <select id="sort2">
+                        <option value="0">Нет</option>
+                        <option value="1">Альбом</option>
+                        <option value="2">Исполнитель</option>
+                        <option value="3">Страна</option>
+                        <option value="4">Жанр</option>
+                        <option value="5">Год</option>
+                        <option value="6">Прослушивания</option>
                     </select>
-                    по убыванию? <input type="checkbox">
+                    <label for="decrease2">по убыванию?</label><input type="checkbox" id="decrease2">
                     </p>
                     <p>
-                    Третий уровень:
-                    <select>
-                        <option>Нет</option>
-                        <option>Альбом</option>
-                        <option>Исполнитель</option>
-                        <option>Страна</option>
-                        <option>Жанр</option>
-                        <option>Год</option>
-                        <option>Прослушивания</option>
+                    <label for="sort3">Третий уровень:</label>
+                    <select id="sort3">
+                        <option value="0">Нет</option>
+                        <option value="1">Альбом</option>
+                        <option value="2">Исполнитель</option>
+                        <option value="3">Страна</option>
+                        <option value="4">Жанр</option>
+                        <option value="5">Год</option>
+                        <option value="6">Прослушивания</option>
                     </select>
-                    по убыванию? <input type="checkbox">
+                    <label for="decrease3">по убыванию?</label><input type="checkbox" id="decrease3">
                     </p>
                     <p><input type="button" value="Сортировать"></p>
                 </details>
 
                 <br>
                 <table border="1" cellpadding="5" cellspacing="0" width="100%">
-                    <tr>
+                    <thead>
+                        <tr>
                         <th>Альбом</th>
                         <th>Исполнитель</th>
                         <th>Страна</th>
@@ -99,6 +99,8 @@
                         <th>Год</th>
                         <th>Прослушивания</th>
                     </tr>
+                    </thead>
+                    <tbody>
                     <tr>
                         <td>Unknown Memory</td>
                         <td>Yung Lean</td>
@@ -179,6 +181,327 @@
                         <td>2016</td>
                         <td>120000000</td>
                     </tr>
+                    <tr>
+                        <td>Scorpion</td>
+                        <td>Drake</td>
+                        <td>Канада</td>
+                        <td>Хип-хоп</td>
+                        <td>2018</td>
+                        <td>14000000000</td>
+                    </tr>
+                    <tr>
+                        <td>good kid, m.A.A.d city</td>
+                        <td>Kendrick Lamar</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2012</td>
+                        <td>9000000000</td>
+                    </tr>
+                    <tr>
+                        <td>To Pimp a Butterfly</td>
+                        <td>Kendrick Lamar</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2015</td>
+                        <td>4000000000</td>
+                    </tr>
+                    <tr>
+                        <td>DAMN.</td>
+                        <td>Kendrick Lamar</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2017</td>
+                        <td>9000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Rodeo</td>
+                        <td>Travis Scott</td>
+                        <td>США</td>
+                        <td>Трэп</td>
+                        <td>2015</td>
+                        <td>6000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Astroworld</td>
+                        <td>Travis Scott</td>
+                        <td>США</td>
+                        <td>Трэп</td>
+                        <td>2018</td>
+                        <td>13000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Utopia</td>
+                        <td>Travis Scott</td>
+                        <td>США</td>
+                        <td>Трэп</td>
+                        <td>2023</td>
+                        <td>5000000000</td>
+                    </tr>
+                    <tr>
+                        <td>My Beautiful Dark Twisted Fantasy</td>
+                        <td>Kanye West</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2010</td>
+                        <td>4500000000</td>
+                    </tr>
+                    <tr>
+                        <td>Graduation</td>
+                        <td>Kanye West</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2007</td>
+                        <td>5000000000</td>
+                    </tr>
+                    <tr>
+                        <td>The Life of Pablo</td>
+                        <td>Kanye West</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2016</td>
+                        <td>4000000000</td>
+                    </tr>
+                    <tr>
+                        <td>After Hours</td>
+                        <td>The Weeknd</td>
+                        <td>Канада</td>
+                        <td>R&amp;B</td>
+                        <td>2020</td>
+                        <td>14000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Starboy</td>
+                        <td>The Weeknd</td>
+                        <td>Канада</td>
+                        <td>R&amp;B</td>
+                        <td>2016</td>
+                        <td>12000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Die Lit</td>
+                        <td>Playboi Carti</td>
+                        <td>США</td>
+                        <td>Трэп</td>
+                        <td>2018</td>
+                        <td>5000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Whole Lotta Red</td>
+                        <td>Playboi Carti</td>
+                        <td>США</td>
+                        <td>Трэп</td>
+                        <td>2020</td>
+                        <td>4500000000</td>
+                    </tr>
+                    <tr>
+                        <td>DS2</td>
+                        <td>Future</td>
+                        <td>США</td>
+                        <td>Трэп</td>
+                        <td>2015</td>
+                        <td>2500000000</td>
+                    </tr>
+                    <tr>
+                        <td>Beerbongs &amp; Bentleys</td>
+                        <td>Post Malone</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2018</td>
+                        <td>13000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Hollywood's Bleeding</td>
+                        <td>Post Malone</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2019</td>
+                        <td>15000000000</td>
+                    </tr>
+                    <tr>
+                        <td>The Marshall Mathers LP</td>
+                        <td>Eminem</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2000</td>
+                        <td>5500000000</td>
+                    </tr>
+                    <tr>
+                        <td>The Eminem Show</td>
+                        <td>Eminem</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2002</td>
+                        <td>7500000000</td>
+                    </tr>
+                    <tr>
+                        <td>2014 Forest Hills Drive</td>
+                        <td>J. Cole</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2014</td>
+                        <td>7000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Flower Boy</td>
+                        <td>Tyler, The Creator</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2017</td>
+                        <td>4000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Igor</td>
+                        <td>Tyler, The Creator</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2019</td>
+                        <td>5000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Channel Orange</td>
+                        <td>Frank Ocean</td>
+                        <td>США</td>
+                        <td>R&amp;B</td>
+                        <td>2012</td>
+                        <td>3500000000</td>
+                    </tr>
+                    <tr>
+                        <td>Blonde</td>
+                        <td>Frank Ocean</td>
+                        <td>США</td>
+                        <td>R&amp;B</td>
+                        <td>2016</td>
+                        <td>8000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Luv Is Rage 2</td>
+                        <td>Lil Uzi Vert</td>
+                        <td>США</td>
+                        <td>Трэп</td>
+                        <td>2017</td>
+                        <td>5000000000</td>
+                    </tr>
+                    <tr>
+                        <td>I Am &gt; I Was</td>
+                        <td>21 Savage</td>
+                        <td>США</td>
+                        <td>Трэп</td>
+                        <td>2018</td>
+                        <td>4000000000</td>
+                    </tr>
+                    <tr>
+                        <td>Goodbye &amp; Good Riddance</td>
+                        <td>Juice WRLD</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2018</td>
+                        <td>9000000000</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>XXXTentacion</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2017</td>
+                        <td>5500000000</td>
+                    </tr>
+                    <tr>
+                        <td>Heroes &amp; Villains</td>
+                        <td>Metro Boomin</td>
+                        <td>США</td>
+                        <td>Трэп</td>
+                        <td>2022</td>
+                        <td>4500000000</td>
+                    </tr>
+                    <tr>
+                        <td>Come Over When You're Sober, Pt. 1</td>
+                        <td>Lil Peep</td>
+                        <td>США</td>
+                        <td>Клауд-рэп</td>
+                        <td>2017</td>
+                        <td>3500000000</td>
+                    </tr>
+                    <tr>
+                        <td>Long. Live. ASAP</td>
+                        <td>A$AP Rocky</td>
+                        <td>США</td>
+                        <td>Хип-хоп</td>
+                        <td>2013</td>
+                        <td>1500000000</td>
+                    </tr>
+                    <tr>
+                        <td>Дом с нормальными явлениями</td>
+                        <td>Скриптонит</td>
+                        <td>Казахстан</td>
+                        <td>Хип-хоп</td>
+                        <td>2015</td>
+                        <td>400000000</td>
+                    </tr>
+                    <tr>
+                        <td>Уроборос</td>
+                        <td>Скриптонит</td>
+                        <td>Казахстан</td>
+                        <td>Хип-хоп</td>
+                        <td>2017</td>
+                        <td>200000000</td>
+                    </tr>
+                    <tr>
+                        <td>Горгород</td>
+                        <td>Oxxxymiron</td>
+                        <td>Россия</td>
+                        <td>Хип-хоп</td>
+                        <td>2015</td>
+                        <td>300000000</td>
+                    </tr>
+                    <tr>
+                        <td>Dragonborn</td>
+                        <td>Big Baby Tape</td>
+                        <td>Россия</td>
+                        <td>Трэп</td>
+                        <td>2018</td>
+                        <td>250000000</td>
+                    </tr>
+                    <tr>
+                        <td>Born to Trap</td>
+                        <td>Kizaru</td>
+                        <td>Россия</td>
+                        <td>Трэп</td>
+                        <td>2019</td>
+                        <td>350000000</td>
+                    </tr>
+                    <tr>
+                        <td>Yamakasi</td>
+                        <td>Miyagi &amp; Andy Panda</td>
+                        <td>Россия</td>
+                        <td>Хип-хоп</td>
+                        <td>2020</td>
+                        <td>600000000</td>
+                    </tr>
+                    <tr>
+                        <td>Phlora</td>
+                        <td>Pharaoh</td>
+                        <td>Россия</td>
+                        <td>Клауд-рэп</td>
+                        <td>2017</td>
+                        <td>150000000</td>
+                    </tr>
+                    <tr>
+                        <td>Stranger</td>
+                        <td>Yung Lean</td>
+                        <td>Швеция</td>
+                        <td>Клауд-рэп</td>
+                        <td>2017</td>
+                        <td>250000000</td>
+                    </tr>
+                    <tr>
+                        <td>Eversince</td>
+                        <td>Bladee</td>
+                        <td>Швеция</td>
+                        <td>Клауд-рэп</td>
+                        <td>2016</td>
+                        <td>150000000</td>
+                    </tr>
+                    </tbody>
                 </table>
             </fieldset>
         </form>
